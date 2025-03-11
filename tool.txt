@@ -1,0 +1,8 @@
+https://github.com/termuxhackers-id/SARA
+https://github.com/TheSpeedX/TBomb
+https://github.com/Tegal1337/Cilocks
+https://github.com/urbanadventurer/WhatWeb
+https://github.com/hak5/usbrubberducky-payloads
+https://github.com/OWASP/Nettacker
+https://github.com/jekil/awesome-hacking
+https://github.com/ASHWIN990/ADB-Toolkit
