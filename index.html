@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en" class="dark-theme">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kex Cybersecurity Framework - A comprehensive security toolkit for penetration testing, vulnerability assessment, and network security operations.">
+    <meta name="keywords" content="cybersecurity, penetration testing, security framework, vulnerability assessment, network security">
+    <meta name="author" content="Kex Security">
+    <meta name="theme-color" content="#000000">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="format-detection" content="telephone=no">
+    <title>Kex | Advanced Cybersecurity Framework</title>
+    <link href="css/styles.css" rel="stylesheet">
+    <link rel="icon" href="images/kex-favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="images/kex-logo.svg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="fixed w-full bg-primary z-50">
+        <div class="container">
+            <nav class="flex items-center justify-between">
+                <div class="logo-container">
+                    <img src="images/kex-logo.svg" alt="Kex Logo" class="logo-img">
+                    <span class="logo-text">Kex</span>
+                </div>
+                
+                <div class="hidden md:flex nav-links">
+                    <a href="#features">Features</a>
+                    <a href="#tools">Tools</a>
+                    <a href="#documentation">Documentation</a>
+                    <a href="#gallery">Gallery</a>
+                    <a href="#community">Community</a>
+                    <button id="theme-toggle" class="text-white hover:text-accent" aria-label="Toggle Dark Mode">
+                        <svg class="moon-icon w-5 h-5 hidden" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                        </svg>
+                        <svg class="sun-icon w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                    <a href="#get-started" class="get-started-btn">Get Started</a>
+                </div>
+                
+                <div class="md:hidden flex items-center">
+                    <button id="theme-toggle-mobile" class="text-white hover:text-accent mr-4" aria-label="Toggle Dark Mode">
+                        <svg class="moon-icon w-5 h-5 hidden" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                        </svg>
+                        <svg class="sun-icon w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                    <button id="navToggle" class="text-white focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Particles Background -->
+    <canvas id="particles-canvas" class="particles-canvas"></canvas>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1></h1>
+                <p class="subtitle">A comprehensive security platform for penetration testing, vulnerability assessment, and advanced security operations with unparalleled speed and precision.</p>
+                <div class="hero-cta">
+                    <a href="#get-started" class="btn-hero-primary">
+                        <i class="fas fa-shield-alt"></i>
+                        Get Started
+                    </a>
+                   
+                    <a href="downloads/Kex-v1.0-x86_64.AppImage" download class="btn-hero-secondary">
+                        <i class="fas fa-download"></i>
+                        Download AppImage
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="images/Kex-dashboard.png" alt="Kex Dashboard">
+            </div>
+        </div>
+        <svg class="wave-separator" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#0f172a" fill-opacity="1" d="M0,224L48,213.3C96,203,192,181,288,181.3C384,181,480,203,576,202.7C672,203,768,181,864,186.7C960,192,1056,224,1152,213.3C1248,203,1344,149,1392,122.7L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+        </svg>
+    </section>
+
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title">Why Choose <span class="highlight">Kex</span>?</h2>
+            <p class="section-subtitle">A next-generation security platform built for modern threats with advanced tools and intuitive workflows.</p>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>All-in-One Security</h3>
+                    <p>Comprehensive suite of security tools in a single unified interface for streamlined operations.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-user-secret"></i>
+                    </div>
+                    <h3>Penetration Testing</h3>
+                    <p>Advanced tools for security assessment, vulnerability scanning, and penetration testing.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-network"></i>
+                    </div>
+                    <h3>Network Analysis</h3>
+                    <p>Real-time monitoring of network traffic with detailed visualization and analysis.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <h3>Secure VPN Integration</h3>
+                    <p>Built-in ProtonVPN support for anonymous and secure connections during security operations.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Customizable</h3>
+                    <p>Easily extend functionality with custom modules and plugins for specialized security tasks.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Learning Resources</h3>
+                    <p>Integrated cybersecurity learning roadmap and resources for skill development.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="get-started" class="get-started">
+        <div class="container">
+            <div class="code-demo">
+                <h2 class="section-title">Quick Installation</h2>
+                <p class="section-subtitle">Get Kex Framework up and running in seconds with simple installation commands.</p>
+                <div class="code-block">
+                    <div class="code-header">
+                        <span class="language">bash</span>
+                        <button class="copy-btn" id="copyInstall">
+                            <i class="far fa-copy"></i>
+                        </button>
+                    </div>
+                    <pre><code>git clone https://github.com/yourusername/kex.git
+cd kex
+pip install -r requirements.txt
+python3 main.py</code></pre>
+                </div>
+                <div class="code-block">
+                    <div class="code-header">
+                        <span class="language">bash</span>
+                        <button class="copy-btn" id="copyExample">
+                            <i class="far fa-copy"></i>
+                        </button>
+                    </div>
+                    <pre><code># For AppImage installation (Linux):
+chmod +x Kex-x86_64.AppImage
+./Kex-x86_64.AppImage</code></pre>
+                </div>
+            </div>
+            <div class="started-content">
+                <p>Available as both a Python application and Linux AppImage for easy distribution and deployment across security environments.</p>
+                <div class="started-features">
+                    <div class="started-feature">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Cross-platform support</span>
+                    </div>
+                    <div class="started-feature">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Minimal dependencies</span>
+                    </div>
+                    <div class="started-feature">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Auto-updates</span>
+                    </div>
+                </div>
+                <a href="#documentation" class="btn btn-primary">Read the Docs</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="downloads" class="downloads">
+        <div class="container">
+            <h2 class="section-title">Download <span class="highlight">Kex</span></h2>
+            <p class="section-subtitle">Get Kex running on your system with one of our pre-built packages.</p>
+            
+            <div class="downloads-grid">
+                <div class="download-card">
+                    <div class="download-icon">
+                        <i class="fab fa-linux"></i>
+                    </div>
+                    <div class="download-content">
+                        <h3>Linux AppImage</h3>
+                        <p>Portable, self-contained executable. No installation required.</p>
+                        <ul class="download-details">
+                            <li><i class="fas fa-check"></i> Works on most Linux distributions</li>
+                            <li><i class="fas fa-check"></i> No admin privileges needed</li>
+                            <li><i class="fas fa-check"></i> x86_64 architecture</li>
+                        </ul>
+                        <div class="download-actions">
+                            <a href="downloads/Kex-x86_64.AppImage" download class="btn-download">
+                                <i class="fas fa-download"></i>
+                                Download AppImage
+                            </a>
+                            <span class="download-size">48.2 MB</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="download-card">
+                    <div class="download-icon">
+                        <i class="fab fa-python"></i>
+                    </div>
+                    <div class="download-content">
+                        <h3>Python Package</h3>
+                        <p>Full source code with complete Python environment.</p>
+                        <ul class="download-details">
+                            <li><i class="fas fa-check"></i> Cross-platform compatibility</li>
+                            <li><i class="fas fa-check"></i> Full access to source code</li>
+                            <li><i class="fas fa-check"></i> Customization options</li>
+                        </ul>
+                        <div class="download-actions">
+                            <a href="https://github.com/yourusername/kex" target="_blank" class="btn-download btn-download-alt">
+                                <i class="fab fa-github"></i>
+                                Clone Repository
+                            </a>
+                            <span class="download-size">Git</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="download-instructions">
+                <h3>Installation Instructions</h3>
+                <div class="instruction-tabs">
+                    <button class="tab-btn active" data-tab="appimage">AppImage</button>
+                    <button class="tab-btn" data-tab="git">Git Clone</button>
+                </div>
+                
+                <div class="tab-content active" id="appimage-content">
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span class="language">bash</span>
+                            <button class="copy-btn" id="copyAppImageInstall">
+                                <i class="far fa-copy"></i>
+                            </button>
+                        </div>
+                        <pre><code># Make the AppImage executable
+chmod +x Kex-x86_64.AppImage
+
+# Run the AppImage
+./Kex-x86_64.AppImage</code></pre>
+                    </div>
+                </div>
+                
+                <div class="tab-content" id="git-content">
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span class="language">bash</span>
+                            <button class="copy-btn" id="copyGitInstall">
+                                <i class="far fa-copy"></i>
+                            </button>
+                        </div>
+                        <pre><code># Clone the repository
+git clone https://github.com/yourusername/kex.git
+
+# Change to the directory
+cd kex
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Run Kex
+python3 main.py</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="tools" class="tools">
+        <div class="container">
+            <h2 class="section-title">Powerful Security <span class="highlight">Toolkit</span></h2>
+            <p class="section-subtitle">A comprehensive suite of specialized tools designed for modern security professionals.</p>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3>OSINT</h3>
+                    <p>Open-source intelligence gathering and reconnaissance tools for comprehensive target analysis.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Reverse Engineering</h3>
+                    <p>Sophisticated decompilers and analysis tools for understanding application internals and code behavior.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>Automated Scanning</h3>
+                    <p>Intelligent scanning engines for vulnerability detection with customizable assessment templates.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h3>Network Exploitation</h3>
+                    <p>Advanced network analysis and penetration testing utilities for security infrastructure validation.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <h3>Access Control</h3>
+                    <p>Authentication systems testing and security access control validation frameworks.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Defense Analysis</h3>
+                    <p>Security defense assessment and hardening recommendations based on threat intelligence.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="examples" class="examples">
+        <div class="container">
+            <h2 class="section-title">Kex in <span class="highlight">Action</span></h2>
+            <p class="section-subtitle">See how security professionals use Kex to secure systems and protect organizations.</p>
+            <div class="examples-grid">
+                <div class="example-card">
+                    <div class="example-image">
+                        <img src="images/example1.svg" alt="OSINT Operations">
+                    </div>
+                    <div class="example-content">
+                        <h3>Intelligence Gathering</h3>
+                        <p>Comprehensive OSINT gathering and target reconnaissance for pre-engagement planning.</p>
+                        <a href="#" class="example-link">View Case Study <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="example-card">
+                    <div class="example-image">
+                        <img src="images/example2.svg" alt="Network Security Assessment">
+                    </div>
+                    <div class="example-content">
+                        <h3>Network Security</h3>
+                        <p>Detailed network vulnerability assessment and visualization for threat detection and mitigation.</p>
+                        <a href="#" class="example-link">View Case Study <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="example-card">
+                    <div class="example-image">
+                        <img src="images/example3.svg" alt="Defense System Analysis">
+                    </div>
+                    <div class="example-content">
+                        <h3>Defense Hardening</h3>
+                        <p>System hardening and defense analysis with comprehensive security reporting and analytics.</p>
+                        <a href="#" class="example-link">View Case Study <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <h2 class="section-title">Kex <span class="highlight">Gallery</span></h2>
+            <p class="section-subtitle">Explore the visual elements of the Kex security framework and its applications.</p>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <div class="gallery-image">
+                        <img src="images/Kex-dashboard.png" alt="Security Dashboard" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h3>Security Dashboard</h3>
+                                <p>Unified command center for all security operations</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-image">
+                        <img src="images/Kex-tools.png" alt="OSINT Tools" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h3>OSINT Suite</h3>
+                                <p>Comprehensive intelligence gathering tools</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-image">
+                        <img src="images/Kex-vpn.png" alt="Network Security" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h3>Network Security</h3>
+                                <p>Secure VPN integration for anonymous operations</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-image">
+                        <img src="images/Kex-roadmap.png" alt="Security Roadmap" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h3>Security Roadmap</h3>
+                                <p>Step-by-step assessment methodology</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-image">
+                        <img src="images/Kex-books.png" alt="Knowledge Base" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h3>Knowledge Base</h3>
+                                <p>Extensive documentation and security resources</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-image">
+                        <img src="images/kex-logo.svg" alt="Kex Icon" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h3>Kex Icon</h3>
+                                <p>The minimalist icon representing Kex framework</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="gallery-button">
+                <button id="galleryFullscreen" class="btn btn-primary">
+                    <i class="fas fa-expand"></i> View Fullscreen Gallery
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section id="community" class="community">
+        <div class="container">
+            <h2 class="section-title">Join the <span class="highlight">Kex</span> Community</h2>
+            <p class="section-subtitle">Connect with security professionals, contribute to the project, and stay updated.</p>
+            <div class="community-grid">
+                <div class="community-card">
+                    <i class="fab fa-github"></i>
+                    <h3>GitHub</h3>
+                    <p>Star us, contribute, or report issues</p>
+                    <a href="#" class="community-link">Visit Repository <i class="fas fa-external-link-alt"></i></a>
+                </div>
+                <div class="community-card">
+                    <i class="fab fa-discord"></i>
+                    <h3>Discord</h3>
+                    <p>Chat with security professionals and get help</p>
+                    <a href="#" class="community-link">Join Server <i class="fas fa-external-link-alt"></i></a>
+                </div>
+                <div class="community-card">
+                    <i class="fab fa-telegram"></i>
+                    <h3>Telegram</h3>
+                    <p>Follow us for the latest security updates</p>
+                    <a href="#" class="community-link">Join Channel <i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="newsletter" class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Stay in the security loop</h2>
+                <p>Subscribe to our newsletter for the latest security tips, tool updates, and vulnerability alerts.</p>
+                <form id="newsletterForm" class="newsletter-form">
+                    <input type="email" placeholder="Enter your email address" required>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <span class="logo-text">Kex</span>
+                        <span class="logo-subtext">Framework</span>
+                    </div>
+                    <p class="footer-tagline">Advanced security toolkit for professionals.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-discord"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Documentation</h4>
+                    <ul>
+                        <li><a href="#">Installation Guide</a></li>
+                        <li><a href="#">Tool Documentation</a></li>
+                        <li><a href="#">API Reference</a></li>
+                        <li><a href="#">Tutorials</a></li>
+                        <li><a href="#">Best Practices</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Community</h4>
+                    <ul>
+                        <li><a href="#">GitHub</a></li>
+                        <li><a href="#">Discord</a></li>
+                        <li><a href="#">Telegram</a></li>
+                        <li><a href="#">Bug Bounty</a></li>
+                        <li><a href="#">Contribute</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Security Blog</a></li>
+                        <li><a href="#">Learning Roadmap</a></li>
+                        <li><a href="#">Feature Roadmap</a></li>
+                        <li><a href="#">Release Notes</a></li>
+                        <li><a href="#">Security Research</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Kex Framework. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Responsible Disclosure</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Gallery Modal -->
+    <div class="gallery-modal" id="galleryModal">
+        <button class="gallery-modal-close" id="galleryClose">
+            <i class="fas fa-times"></i>
+        </button>
+        <button class="gallery-modal-prev" id="galleryPrev">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <div class="gallery-modal-content">
+            <img src="" alt="" class="gallery-modal-image" id="modalImage">
+            <div class="gallery-modal-caption" id="modalCaption"></div>
+        </div>
+        <button class="gallery-modal-next" id="galleryNext">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

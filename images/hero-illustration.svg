@@ -1,0 +1,64 @@
+<svg width="800" height="600" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect width="800" height="600" fill="#030712"/>
+    <g opacity="0.9">
+        <path d="M584.936 212.458C601.623 201.083 624.192 205.369 635.567 222.056C646.942 238.743 642.657 261.311 625.969 272.687L530.741 333.975C514.054 345.35 491.486 341.064 480.11 324.377C468.735 307.69 473.021 285.121 489.708 273.746L584.936 212.458Z" fill="#4f46e5" fill-opacity="0.6"/>
+        <path d="M371.075 316.542C387.763 305.167 410.331 309.452 421.706 326.14C433.082 342.827 428.796 365.395 412.109 376.771L316.881 438.059C300.193 449.434 277.625 445.148 266.25 428.461C254.874 411.774 259.16 389.205 275.847 377.83L371.075 316.542Z" fill="#4f46e5" fill-opacity="0.4"/>
+        <path d="M177.615 226.458C194.302 215.083 216.871 219.369 228.246 236.056C239.621 252.743 235.336 275.311 218.648 286.687L123.42 347.975C106.733 359.35 84.165 355.064 72.789 338.377C61.414 321.69 65.7 299.121 82.387 287.746L177.615 226.458Z" fill="#4f46e5" fill-opacity="0.5"/>
+    </g>
+    
+    <!-- Shield -->
+    <g transform="translate(400, 300) scale(1.2)">
+        <path d="M0 -150 L-90 -120 L-90 -30 C-90 60 0 100 0 100 C0 100 90 60 90 -30 L90 -120 L0 -150Z" fill="#4f46e5" fill-opacity="0.15" stroke="#818cf8" stroke-width="4"/>
+        <path d="M0 -130 L-70 -105 L-70 -30 C-70 45 0 80 0 80 C0 80 70 45 70 -30 L70 -105 L0 -130Z" fill="#4f46e5" fill-opacity="0.25" stroke="#818cf8" stroke-width="2"/>
+        
+        <!-- Lock Body -->
+        <rect x="-35" y="-40" width="70" height="60" rx="10" fill="#4f46e5"/>
+        
+        <!-- Lock Shackle -->
+        <path d="M-15 -40 L-15 -70 C-15 -85 15 -85 15 -70 L15 -40" stroke="#818cf8" stroke-width="12" stroke-linecap="round" fill="none"/>
+        
+        <!-- Keyhole -->
+        <circle cx="0" cy="-10" r="10" fill="#e2e8f0"/>
+        <rect x="-3" y="-5" width="6" height="20" fill="#e2e8f0"/>
+    </g>
+    
+    <!-- Binary/Code Background (Subtle) -->
+    <g opacity="0.15">
+        <text x="100" y="100" font-family="monospace" font-size="14" fill="#818cf8">01101000 01100001 01100011 01101011</text>
+        <text x="550" y="150" font-family="monospace" font-size="14" fill="#818cf8">01110011 01100101 01100011 01110101 01110010 01100101</text>
+        <text x="200" y="200" font-family="monospace" font-size="14" fill="#818cf8">01110000 01110010 01101111 01110100 01100101 01100011 01110100</text>
+        <text x="450" y="250" font-family="monospace" font-size="14" fill="#818cf8">01100110 01101001 01110010 01100101 01110111 01100001 01101100 01101100</text>
+        <text x="150" y="300" font-family="monospace" font-size="14" fill="#818cf8">01100101 01101110 01100011 01110010 01111001 01110000 01110100</text>
+        <text x="300" y="350" font-family="monospace" font-size="14" fill="#818cf8">01110000 01100101 01101110 01110100 01100101 01110011 01110100</text>
+        <text x="500" y="400" font-family="monospace" font-size="14" fill="#818cf8">01110110 01110101 01101100 01101110</text>
+        <text x="250" y="450" font-family="monospace" font-size="14" fill="#818cf8">01100100 01100101 01100110 01100101 01101110 01110011 01100101</text>
+    </g>
+    
+    <!-- Network Nodes -->
+    <g>
+        <circle cx="150" y="150" r="15" fill="#4f46e5" fill-opacity="0.7"/>
+        <circle cx="250" y="200" r="12" fill="#4f46e5" fill-opacity="0.5"/>
+        <circle cx="200" y="300" r="10" fill="#4f46e5" fill-opacity="0.6"/>
+        <circle cx="600" y="180" r="14" fill="#4f46e5" fill-opacity="0.8"/>
+        <circle cx="550" y="280" r="11" fill="#4f46e5" fill-opacity="0.4"/>
+        <circle cx="650" y="350" r="13" fill="#4f46e5" fill-opacity="0.7"/>
+        
+        <!-- Connection lines -->
+        <line x1="150" y1="150" x2="250" y2="200" stroke="#818cf8" stroke-width="2" stroke-opacity="0.3"/>
+        <line x1="250" y1="200" x2="200" y2="300" stroke="#818cf8" stroke-width="2" stroke-opacity="0.3"/>
+        <line x1="600" y1="180" x2="550" y2="280" stroke="#818cf8" stroke-width="2" stroke-opacity="0.3"/>
+        <line x1="550" y1="280" x2="650" y2="350" stroke="#818cf8" stroke-width="2" stroke-opacity="0.3"/>
+        <line x1="200" y1="300" x2="550" y2="280" stroke="#818cf8" stroke-width="2" stroke-opacity="0.3" stroke-dasharray="5,5"/>
+        <line x1="250" y1="200" x2="600" y2="180" stroke="#818cf8" stroke-width="2" stroke-opacity="0.3" stroke-dasharray="5,5"/>
+    </g>
+    
+    <!-- Scanning Effect Animation -->
+    <rect x="320" y="170" width="160" height="260" fill="none" stroke="#818cf8" stroke-width="2" rx="4">
+        <animate attributeName="stroke-opacity" values="0.2;0.8;0.2" dur="3s" repeatCount="indefinite"/>
+    </rect>
+    <line x1="320" y1="170" x2="320" y2="430" stroke="#818cf8" stroke-width="4">
+        <animate attributeName="x1" values="320;480;320" dur="3s" repeatCount="indefinite"/>
+        <animate attributeName="x2" values="320;480;320" dur="3s" repeatCount="indefinite"/>
+        <animate attributeName="stroke-opacity" values="0.1;0.8;0.1" dur="3s" repeatCount="indefinite"/>
+    </line>
+</svg> 

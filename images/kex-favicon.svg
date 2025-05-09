@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 32 32" fill="none">
+  <!-- Shield background -->
+  <path d="M16 2L4 6V14C4 22 10 26 16 30C22 26 28 22 28 14V6L16 2Z" fill="#030712" stroke="#4f46e5" stroke-width="1.5"/>
+  
+  <!-- "K" letter design -->
+  <path d="M12 10H14V16H12V10Z" fill="#818cf8"/>
+  <path d="M18 10H20L14 16H12L18 10Z" fill="#818cf8"/>
+  <path d="M12 22H14V16H12V22Z" fill="#818cf8"/>
+  <path d="M12 16H14L20 22H18L12 16Z" fill="#818cf8"/>
+</svg> 

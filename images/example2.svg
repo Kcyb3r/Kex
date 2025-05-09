@@ -1,0 +1,63 @@
+<svg width="400" height="225" viewBox="0 0 400 225" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="225" fill="#0f172a"/>
+  
+  <!-- Top Banner -->
+  <rect x="20" y="15" width="360" height="30" rx="4" fill="#4f46e5"/>
+  <text x="40" y="35" font-family="Arial" font-size="14" font-weight="bold" fill="#e2e8f0">Network Traffic Monitor</text>
+  
+  <!-- Network Diagram -->
+  <rect x="20" y="55" width="230" height="155" rx="4" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  
+  <!-- Network Nodes -->
+  <circle cx="135" cy="110" r="25" fill="#4f46e5" fill-opacity="0.2" stroke="#818cf8" stroke-width="2"/>
+  <text x="128" y="114" font-family="Arial" font-size="12" fill="#818cf8">Core</text>
+  
+  <!-- Edge Nodes -->
+  <circle cx="65" cy="80" r="15" fill="#4f46e5" fill-opacity="0.1" stroke="#818cf8" stroke-width="1.5"/>
+  <circle cx="65" cy="140" r="15" fill="#4f46e5" fill-opacity="0.1" stroke="#818cf8" stroke-width="1.5"/>
+  <circle cx="205" cy="80" r="15" fill="#4f46e5" fill-opacity="0.1" stroke="#818cf8" stroke-width="1.5"/>
+  <circle cx="205" cy="140" r="15" fill="#4f46e5" fill-opacity="0.1" stroke="#818cf8" stroke-width="1.5"/>
+  
+  <!-- Devices -->
+  <rect x="50" cy="75" width="10" height="10" fill="#818cf8"/>
+  <rect x="50" cy="135" width="10" height="10" fill="#818cf8"/>
+  <rect x="200" cy="75" width="10" height="10" fill="#818cf8"/>
+  <rect x="200" cy="135" width="10" height="10" fill="#818cf8"/>
+  
+  <!-- Connection Lines -->
+  <line x1="80" y1="80" x2="110" y2="95" stroke="#818cf8" stroke-width="1.5" stroke-dasharray="2 2">
+    <animate attributeName="stroke-opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite"/>
+  </line>
+  <line x1="80" y1="140" x2="110" y2="125" stroke="#818cf8" stroke-width="1.5" stroke-dasharray="2 2">
+    <animate attributeName="stroke-opacity" values="0.3;1;0.3" dur="2.5s" repeatCount="indefinite"/>
+  </line>
+  <line x1="190" y1="95" x2="160" y2="80" stroke="#818cf8" stroke-width="1.5" stroke-dasharray="2 2">
+    <animate attributeName="stroke-opacity" values="0.3;1;0.3" dur="2.2s" repeatCount="indefinite"/>
+  </line>
+  <line x1="190" y1="125" x2="160" y2="140" stroke="#818cf8" stroke-width="1.5" stroke-dasharray="2 2">
+    <animate attributeName="stroke-opacity" values="0.3;1;0.3" dur="1.8s" repeatCount="indefinite"/>
+  </line>
+  
+  <!-- Traffic Statistics Panel -->
+  <rect x="260" y="55" width="120" height="155" rx="4" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  
+  <!-- Panel Title -->
+  <rect x="270" y="65" width="100" height="8" rx="2" fill="#818cf8" fill-opacity="0.7"/>
+  
+  <!-- Traffic Stats -->
+  <rect x="270" y="85" width="60" height="8" rx="2" fill="#94a3b8"/>
+  <rect x="270" y="95" width="100" height="6" rx="2" fill="#10B981" fill-opacity="0.3"/>
+  <rect x="270" y="95" width="70" height="6" rx="2" fill="#10B981"/>
+  
+  <rect x="270" y="115" width="60" height="8" rx="2" fill="#94a3b8"/>
+  <rect x="270" y="125" width="100" height="6" rx="2" fill="#F59E0B" fill-opacity="0.3"/>
+  <rect x="270" y="125" width="45" height="6" rx="2" fill="#F59E0B"/>
+  
+  <rect x="270" y="145" width="60" height="8" rx="2" fill="#94a3b8"/>
+  <rect x="270" y="155" width="100" height="6" rx="2" fill="#EF4444" fill-opacity="0.3"/>
+  <rect x="270" y="155" width="25" height="6" rx="2" fill="#EF4444"/>
+  
+  <rect x="270" y="175" width="60" height="8" rx="2" fill="#94a3b8"/>
+  <rect x="270" y="185" width="100" height="6" rx="2" fill="#818CF8" fill-opacity="0.3"/>
+  <rect x="270" y="185" width="80" height="6" rx="2" fill="#818CF8"/>
+</svg> 
