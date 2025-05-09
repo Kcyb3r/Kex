@@ -834,3 +834,36 @@ function initParticles() {
         createParticles();
     });
 } 
+
+
+
+(function() {
+  const popup = document.getElementById('premium-popup');
+  const overlay = document.getElementById('premium-popup-overlay');
+  const closeBtn = document.getElementById('close-popup');
+  let timer = null;
+
+  function showPopup() {
+    popup.style.display = 'block';
+    overlay.style.display = 'block';
+  }
+
+  function hidePopup() {
+    popup.style.display = 'none';
+    overlay.style.display = 'none';
+    // Start timer to show popup again in 20 seconds
+    timer = setTimeout(showPopup, 20000);
+  }
+
+  // Initial popup after 20 seconds
+  timer = setTimeout(showPopup, 20000);
+
+  closeBtn.addEventListener('click', function() {
+    hidePopup();
+  });
+
+  // Optional: close popup when clicking outside of it
+  overlay.addEventListener('click', function() {
+    hidePopup();
+  });
+})();
