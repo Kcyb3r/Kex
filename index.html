@@ -18,6 +18,40 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        .download-actions {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .download-buttons {
+            display: flex;
+            align-items: center;
+            gap: 9px;
+        }
+        .btn-download {
+            margin: 0;
+            padding: 4px 8px;
+        }
+        .download-size {
+            margin-left: 4px;
+        }
+        @media (max-width: 480px) {
+            .section-title,
+            .section-subtitle {
+                padding-left: 12px;
+                padding-right: 12px;
+                text-align: center;
+            }
+            .code-demo {
+                padding: 0.5rem 0.5rem;
+            }
+            .code-block pre {
+                font-size: 0.85rem;
+                padding: 1rem 0.5rem;
+            }
+        }
+    </style>
 </head>
 <body>
     <header class="fixed w-full bg-primary z-50">
@@ -31,7 +65,6 @@
                 <div class="hidden md:flex nav-links">
                     <a href="#features">Features</a>
                     <a href="#tools">Tools</a>
-                    <a href="#documentation">Documentation</a>
                     <a href="#gallery">Gallery</a>
                     <a href="#community">Community</a>
                     <button id="theme-toggle" class="text-white hover:text-accent" aria-label="Toggle Dark Mode">
@@ -78,9 +111,10 @@
                         Get Started
                     </a>
                    
-                    <a href="downloads/Kex-Framework-x86_64.AppImage" download class="btn-hero-secondary">
+                    <a href="https://t.me/Kcyb3/385" download class="btn-hero-secondary">
                         <i class="fas fa-download"></i>
-                        Download AppImage
+                        Download AppImage 
+
                     </a>
                 </div>
             </div>
@@ -114,7 +148,7 @@
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
-                        <i class="fas fa-chart-network"></i>
+                        <i class="fas fa-network-wired"></i>
                     </div>
                     <h3>Network Analysis</h3>
                     <p>Real-time monitoring of network traffic with detailed visualization and analysis.</p>
@@ -156,17 +190,10 @@
                             <i class="far fa-copy"></i>
                         </button>
                     </div>
-                    <pre><code>THIS TOOL IS CURRENTLY UNAVAILABLE ...
-</code></pre>
-                </div>
-                <div class="code-block">
-                    <div class="code-header">
-                        <span class="language">bash</span>
-                        <button class="copy-btn" id="copyExample">
-                            <i class="far fa-copy"></i>
-                        </button>
-                    </div>
-                    <pre><code># For AppImage installation (Linux):
+                    <pre><code># Install python dependencies (Linux):
+pip3 install -r requirements.txt --break-system-packages
+
+# For AppImage installation (Linux):
 chmod +x Kex-x86_64.AppImage
 ./Kex-x86_64.AppImage</code></pre>
                 </div>
@@ -187,7 +214,7 @@ chmod +x Kex-x86_64.AppImage
                         <span>Auto-updates</span>
                     </div>
                 </div>
-                <a href="#documentation" class="btn btn-primary">Read the Docs</a>
+               
             </div>
         </div>
     </section>
@@ -205,89 +232,30 @@ chmod +x Kex-x86_64.AppImage
                     <div class="download-content">
                         <h3>Linux AppImage</h3>
                         <p>Portable, self-contained executable. No installation required.</p>
+                        <p class="availability-note"><i class="fas fa-info-circle"></i> This AppImage is exclusively available through our official Telegram channel.</p>
                         <ul class="download-details">
                             <li><i class="fas fa-check"></i> Works on most Linux distributions</li>
                             <li><i class="fas fa-check"></i> No admin privileges needed</li>
                             <li><i class="fas fa-check"></i> x86_64 architecture</li>
                         </ul>
                         <div class="download-actions">
-                            <a href="downloads/Kex-x86_64.AppImage" download class="btn-download">
-                                <i class="fas fa-download"></i>
-                                Download AppImage
-                            </a>
-                            <span class="download-size">48.2 MB</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="download-card">
-                    <div class="download-icon">
-                        <i class="fab fa-python"></i>
-                    </div>
-                    <div class="download-content">
-                        <h3>Python Package</h3>
-                        <p>Full source code with complete Python environment.</p>
-                        <ul class="download-details">
-                            <li><i class="fas fa-check"></i> Cross-platform compatibility</li>
-                            <li><i class="fas fa-check"></i> Full access to source code</li>
-                            <li><i class="fas fa-check"></i> Customization options</li>
-                        </ul>
-                        <div class="download-actions">
-                            <a href="https://github.com/yourusername/kex" target="_blank" class="btn-download btn-download-alt">
-                                <i class="fab fa-github"></i>
-                                Clone Repository
-                            </a>
-                            <span class="download-size">Git</span>
+                            <div class="download-buttons">
+                                <a href="https://t.me/Kcyb3/385" download class="btn-download">
+                                    <i class="fas fa-download"></i>
+                                    Download AppImage
+                                </a>
+                                <a href="requirements.txt" download class="btn-download btn-download-alt">
+                                    <i class="fas fa-file-alt"></i>
+                                    Download Requirements.txt
+                                </a>
+                            </div>
+                            <span class="download-size">55.2 MB</span>
                         </div>
                     </div>
                 </div>
             </div>
             
-            <div class="download-instructions">
-                <h3>Installation Instructions</h3>
-                <div class="instruction-tabs">
-                    <button class="tab-btn active" data-tab="appimage">AppImage</button>
-                    <button class="tab-btn" data-tab="git">Git Clone</button>
-                </div>
-                
-                <div class="tab-content active" id="appimage-content">
-                    <div class="code-block">
-                        <div class="code-header">
-                            <span class="language">bash</span>
-                            <button class="copy-btn" id="copyAppImageInstall">
-                                <i class="far fa-copy"></i>
-                            </button>
-                        </div>
-                        <pre><code># Make the AppImage executable
-chmod +x Kex-x86_64.AppImage
-
-# Run the AppImage
-./Kex-x86_64.AppImage</code></pre>
-                    </div>
-                </div>
-                
-                <div class="tab-content" id="git-content">
-                    <div class="code-block">
-                        <div class="code-header">
-                            <span class="language">bash</span>
-                            <button class="copy-btn" id="copyGitInstall">
-                                <i class="far fa-copy"></i>
-                            </button>
-                        </div>
-                        <pre><code># Clone the repository
-git clone https://github.com/yourusername/kex.git
-
-# Change to the directory
-cd kex
-
-# Install dependencies
-pip install -r requirements.txt
-
-# Run Kex
-python3 main.py</code></pre>
-                    </div>
-                </div>
-            </div>
+         
         </div>
     </section>
 
@@ -472,19 +440,19 @@ python3 main.py</code></pre>
                     <i class="fab fa-github"></i>
                     <h3>GitHub</h3>
                     <p>Star us, contribute, or report issues</p>
-                    <a href="#" class="community-link">Visit Repository <i class="fas fa-external-link-alt"></i></a>
+                    <a href="https://github.com/Kcyb3r" class="community-link">Visit Repository <i class="fas fa-external-link-alt"></i></a>
                 </div>
-                <div class="community-card">
+                <!-- <div class="community-card">
                     <i class="fab fa-discord"></i>
-                    <h3>Discord</h3>
+                    <h3></h3>
                     <p>Chat with security professionals and get help</p>
                     <a href="#" class="community-link">Join Server <i class="fas fa-external-link-alt"></i></a>
-                </div>
+                </div> -->
                 <div class="community-card">
                     <i class="fab fa-telegram"></i>
                     <h3>Telegram</h3>
                     <p>Follow us for the latest security updates</p>
-                    <a href="#" class="community-link">Join Channel <i class="fas fa-external-link-alt"></i></a>
+                    <a href="https://t.me/Kcyb3" class="community-link">Join Channel <i class="fas fa-external-link-alt"></i></a>
                 </div>
             </div>
         </div>
@@ -513,49 +481,33 @@ python3 main.py</code></pre>
                     </div>
                     <p class="footer-tagline">Advanced security toolkit for professionals.</p>
                     <div class="social-links">
-                        <a href="#"><i class="fab fa-github"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-discord"></i></a>
-                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="https://github.com/Kcyb3r"><i class="fab fa-github"></i></a>
+                        
+                        <a href="https://t.me/Kcyb3"><i class="fab fa-telegram"></i></a>
                     </div>
-                </div>
-                <div class="footer-col">
-                    <h4>Documentation</h4>
-                    <ul>
-                        <li><a href="#">Installation Guide</a></li>
-                        <li><a href="#">Tool Documentation</a></li>
-                        <li><a href="#">API Reference</a></li>
-                        <li><a href="#">Tutorials</a></li>
-                        <li><a href="#">Best Practices</a></li>
-                    </ul>
                 </div>
                 <div class="footer-col">
                     <h4>Community</h4>
                     <ul>
-                        <li><a href="#">GitHub</a></li>
-                        <li><a href="#">Discord</a></li>
-                        <li><a href="#">Telegram</a></li>
-                        <li><a href="#">Bug Bounty</a></li>
-                        <li><a href="#">Contribute</a></li>
+                        <li><a href="https://github.com/Kcyb3r">GitHub</a></li>
+                        
+                        <li><a href="https://t.me/Kcyb3">Telegram</a></li>
+                       
                     </ul>
                 </div>
                 <div class="footer-col">
                     <h4>Resources</h4>
                     <ul>
-                        <li><a href="#">Security Blog</a></li>
-                        <li><a href="#">Learning Roadmap</a></li>
-                        <li><a href="#">Feature Roadmap</a></li>
-                        <li><a href="#">Release Notes</a></li>
-                        <li><a href="#">Security Research</a></li>
+                        <li><a href="https://t.me/Kcyb3">Cyber Security Resources</a></li>
+                        <li><a href="https://github.com/Kcyb3r">More Tools</a></li>
+                        
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2023 Kex Framework. All rights reserved.</p>
-                <div class="footer-links">
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Terms of Service</a>
-                    <a href="#">Responsible Disclosure</a>
+                <p>&copy; 2025 Kex Framework. All rights reserved.</p>
+                <div class="footer-title">
+                    <p>Made with ❤️ by <a href="https://github.com/Kcyb3r">Kcyb3</a></p>
                 </div>
             </div>
         </div>
@@ -577,14 +529,6 @@ python3 main.py</code></pre>
             <i class="fas fa-chevron-right"></i>
         </button>
     </div>
-    <div id="premium-popup-overlay" style="display:none;"></div>
-<div id="premium-popup" style="display:none;">
-  <div class="popup-content">
-    <span class="close-btn" id="close-popup">&times;</span>
-    <p>This tool is currently unavailable ..</p>
-  </div>
-</div>
-
 
     <script src="js/main.js"></script>
 </body>
