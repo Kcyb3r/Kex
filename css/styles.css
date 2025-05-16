@@ -809,6 +809,9 @@ nav {
 }
 
 @media (max-width: 768px) {
+    html {
+        font-size: 14px;
+    }
     .nav-toggle {
         display: block;
     }
@@ -871,6 +874,26 @@ nav {
     
     .hero {
         padding: 7rem 0 5rem;
+    }
+    
+    .get-started .container {
+        display: block;
+        padding: 0 8px;
+        gap: 0;
+    }
+    .code-demo, .started-content {
+        width: 100%;
+        padding: 1.2rem 0.5rem;
+        box-sizing: border-box;
+    }
+    .get-started {
+        overflow-x: hidden;
+    }
+    .get-started .container,
+    .code-demo,
+    .started-content {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
     }
 }
 
@@ -2356,55 +2379,9 @@ body {
     }
     
     .download-card {
-        max-width: 400px;
-        margin-left: auto;
-        margin-right: auto;
+        max-width: 100%;
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
     }
 } 
-
-
-
-
-#premium-popup-overlay {
-  position: fixed;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(0,0,0,0.7);
-  z-index: 9998;
-}
-
-#premium-popup {
-  position: fixed;
-  top: 50%; left: 50%;
-  transform: translate(-50%, -50%);
-  background: #111;
-  color: #fff;
-  border-radius: 16px;
-  box-shadow: 0 8px 32px rgba(0,0,0,0.7);
-  z-index: 9999;
-  min-width: 320px;
-  padding: 32px 40px;
-  font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
-  text-align: center;
-}
-
-#premium-popup .popup-content {
-  position: relative;
-}
-
-#premium-popup .close-btn {
-  position: absolute;
-  top: -16px; right: -16px;
-  background: #222;
-  color: #fff;
-  border: none;
-  border-radius: 50%;
-  width: 32px; height: 32px;
-  font-size: 1.5rem;
-  cursor: pointer;
-  line-height: 32px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
-  transition: background 0.2s;
-}
-#premium-popup .close-btn:hover {
-  background: #444;
-}
